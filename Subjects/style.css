@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Lato:&display=swap');
+
+
+
+*:after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgb(18, 48, 82);
+  background-color: #f39c12;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+section {
+  background-color: #f39c12;
+  padding: 100px 0;
+}
+
+
+.tab__list {
+  display: flex;
+  margin-bottom: 24px;
+}
+.tab__item {
+  overflow: hidden;
+  cursor: pointer;
+  padding: 12px 8px;
+  margin-right: 24px;
+  text-shadow: 0 0 0.5px currentColor;
+  letter-spacing: 1px;
+  transition: 0.2s;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  position: relative;
+  color: #2c2c2c;
+}
+.tab__item:before {
+  content: "";
+  position: absolute;
+  top: 95%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #212121;
+  transition: 0.2s;
+  visibility: hidden;
+  opacity: 0;
+}
+.tab__item.is--active {
+  color: #212121;
+  position: relative;
+}
+.tab__item.is--active:before {
+  visibility: visible;
+  opacity: 1;
+}
+.tab__content {
+  padding: 32px;
+  background: #f1e2e2;
+  border-radius: 0 10px 10px;
+
+}
+.tab__content-item {
+  display: none;
+}
+.tab__content-item.is--active {
+  display: block;
+}
+.tab__content-title {
+  padding: 24px 24px 24px 0;
+}
+
+.tab .tab .tab__item {
+  font-size: 16px;
+}
+.tab .tab .tab__content {
+  padding: 0;
+}
